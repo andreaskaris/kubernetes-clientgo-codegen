@@ -18,7 +18,7 @@ This minimal example contains the following:
 
 # How to use this?
 
-For code generation to work, this code *must* be under `$GOPATH/src`. I tried a lot of variations to not have to do this (because my projects normally live outside of $GOPATH, all me a weirdo ...); none work. Hence, check this out into your gopath, under `$GOPATH/src/example.com/m`.
+For code generation to work, this code *must* be under `$GOPATH/src`. I tried a lot of variations to not have to do this (because my projects normally live outside of $GOPATH, call me a weirdo ...); none work. Hence, check this out into your gopath, under `$GOPATH/src/example.com/m`.
 
 Then, run the following to generate the client-go code:
 ~~~
