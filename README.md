@@ -20,11 +20,25 @@ This minimal example contains the following:
 
 For code generation to work, this code *must* be under `$GOPATH/src`. I tried a lot of variations to not have to do this (because my projects normally live outside of $GOPATH, all me a weirdo ...); none work. Hence, check this out into your gopath, under `$GOPATH/src/example.com/m`.
 
-Then, run the following:
+Then, run the following to generate the client-go code:
 ~~~
+mv main.go main
 go mod tidy
 go vendor
 hack/update-codegen.sh
+mv main main.go
+~~~
+
+Now, add a custom resource definition and a single `Foo` resource:
+~~~
+kubectl apply -f artifacts/crd.yaml
+kubectl apply -f artifacts/example-foo.yaml
+~~~
+
+Now, compile and run `main.go`:
+~~~
+go mod tidy
+go mod vendor
 go run main.go
 ~~~
 
