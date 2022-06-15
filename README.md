@@ -31,6 +31,7 @@ mv main main.go
 
 Now, add a custom resource definition and a single `Foo` resource:
 ~~~
+export KUBECONFIG=kubeconfig
 kubectl apply -f artifacts/crd.yaml
 kubectl apply -f artifacts/example-foo.yaml
 ~~~
