@@ -6,7 +6,7 @@ https://github.com/kubernetes/code-generator/. deepcopy-gen, client-gen, lister-
 and informer-gen will generate the client code that's needed to interact with a
 custom resource via the kubernetes API.
 
-Now of this code (other than `main.go`) is mine and all credit goes to the original
+None of this code (other than `main.go`) is mine and all credit goes to the original
 authors, this repo shall just serve as a minimal example for what's needed to get
 code-generation up and running.
 
